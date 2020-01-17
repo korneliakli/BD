@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Details for order no. {{ orders.order_id }}</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Customer</th>
+      <th scope="col">Employee</th>
+      <th scope="col">Order Date</th>
+      <th scope="col">Ship via</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+            <td>{{ orders.customer_id.company_name }}</td>
+            <td>{{ orders.employee_id.first_name }} {{ orders.employee_id.last_name }}</td>
+            <td>{{ orders.order_date }}</td>
+            <td>{{ orders.ship_via }}</td>
+	    </tr>
+  </body>
+</table>
+
+
+{% endblock %}
